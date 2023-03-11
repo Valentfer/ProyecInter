@@ -89,23 +89,24 @@ namespace ProyecInter
                 //me conecto e inserto
 
                 conn.Open();
-                string insertar = "INSERT INTO Trabajador (id, Nombre, Apellidos, Direccion, idPedido) VALUES (@id, @nombre, @apellidos, @direccion, @idPedido)";
+              //  string insertar = "INSERT INTO Trabajador ( Nombre, Apellidos, Direccion, idPedid) VALUES ( @nombre, @apellidos, @direccion, @idPedido)";
+                string insertar = "INSERT INTO Trabajador ( Nombre, Apellidos, Direccion) VALUES ( @nombre, @apellidos, @direccion)";
                 SqlCommand comand = new SqlCommand(insertar, conn);
             //ocurre lo mismo que al introducir un pedido, daria error y tengo que falsearlo por que la base de datos no esta bien creada
-                int id = 6;
+               // int id = 6;
                 String nombre = txbNombre.Text;
                 String apellidos = txbApe.Text;
                 String direccion = txbDir.Text;
-                int idPedido = 4;
+               // int idPedido = 4;
 
 
                 //añadir parametros
 
-                comand.Parameters.Add(new SqlParameter("@id", id));
+               // comand.Parameters.Add(new SqlParameter("@id", id));
                 comand.Parameters.Add(new SqlParameter("@nombre", nombre));
                 comand.Parameters.Add(new SqlParameter("@apellidos", apellidos));
                 comand.Parameters.Add(new SqlParameter("@direccion", direccion));
-                comand.Parameters.Add(new SqlParameter("@idPedido", idPedido));
+               // comand.Parameters.Add(new SqlParameter("@idPedido", idPedido));
 
                 //filas
                 int filas = comand.ExecuteNonQuery();
