@@ -68,6 +68,26 @@ namespace ProyecInter
         //eliminar una fila del datagridview
         private void btnElimPedid_Click(object sender, EventArgs e)
         {
+            //SqlConnection conn = new SqlConnection("Server = localhost; Database = AppGest; Integrated Security=SSPI");
+            SqlConnection conn = new SqlConnection("Server = DESKTOP-0KVUR04; Database = AppGest; Integrated Security=SSPI");
+
+            foreach (DataGridViewRow fila in dgvPedidos.Rows)
+            {
+                //me conecto y elimino el pedido de datos
+
+                conn.Open();
+                string insertar = "DELETE FROM Pedido WHERE id = @id";
+                SqlCommand comand = new SqlCommand(insertar, conn);
+
+                //añadir parametros
+                comand.Parameters.Add(new SqlParameter("@id", dgvPedidos.CurrentRow.Index));
+
+                //filas
+                int filas = comand.ExecuteNonQuery();
+                MessageBox.Show(filas + " filas Eliminadas");
+                conn.Close();
+            }
+            //Elimino el pedido del datagridview
             this.dgvPedidos.Rows.RemoveAt(dgvPedidos.CurrentRow.Index);
         }
         //si dejamos el texbox y no hay nada escrito se vuelve a ver la palabra buscar
