@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.51cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.81828cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle1">
+                      <ReportItems>
+                        <Textbox Name="NombreCliente">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!NombreCliente.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>NombreCliente</rd:DefaultName>
+                          <Top>0.63078cm</Top>
+                          <Left>0.56303cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>2.5cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Direccion">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Direccion.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Direccion</rd:DefaultName>
+                          <Top>0.63078cm</Top>
+                          <Left>11.9342cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>4.151cm</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="Subreport1">
+                          <ReportName>Report2</ReportName>
+                          <Parameters>
+                            <Parameter Name="nombre">
+                              <Value>=Fields!NombreCliente.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>1.98544cm</Top>
+                          <Left>0.56303cm</Left>
+                          <Height>5.29283cm</Height>
+                          <Width>15.52217cm</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.17639cm</Top>
+        <Height>9.81828cm</Height>
+        <Width>16.51cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>3.93491in</Height>
+    <Style />
+  </Body>
+  <Width>6.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>3.01553cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image2">
+          <Source>Embedded</Source>
+          <Value>icons8empresa64</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.73237cm</Top>
+          <Left>0.56303cm</Left>
+          <Height>1.5cm</Height>
+          <Width>1.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>APPGest</Value>
+                  <Style>
+                    <FontSize>36pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.82803cm</Top>
+          <Left>5.83353cm</Left>
+          <Height>1.40433cm</Height>
+          <Width>5.59033cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>LightGreen</BackgroundColor>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>LightGreen</BackgroundColor>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>f815a6f2-2a39-4f88-899f-9a6938eaf7b8</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSet1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="NombreCliente">
+          <DataField>NombreCliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Direccion">
+          <DataField>Direccion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Unidades">
+          <DataField>Unidades</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Precio">
+          <DataField>Precio</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\valen\OneDrive\Escritorio\ProyecInter\ProyecInter\DataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="icons8empresa64">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMElEQVR4nO2ZP2gUURDGf0Q8DFGTXiNGTcyBhWlFBCttLPzX2ahYKihqsNYiirWY1osIolFB4p9KDalUMJVaaCMRI8YkJCJEkycPv4XHclyyd9nc3N1+8OB23ptvZ2dn572ZgwwZVhIjgFtkDFPHcEscdQu3yANmDuC/E84BbTRwBDjgN3AL2EEDOuA5sKDfC7o+ADRRo2hTWCfJAXngBjATyF9QY8gXeYikSXCpzjODJoVrsTCuZBeoGQe8DIydUQT4SKBRHOBKbGUN5YBiyBxAFgFknwB1mANGElR6yzVMlc2uSsMMfsmgQ8D6QP5Z8ugckAR56X4KZH5bPSK5v6cZDARvZQzYJPk9yU6XwXlGund13QF8C+7jK0UzaAZ6gVEZd1Pyo7r+AOQS8Pm1H6V7WLJ+Xb8DLgJrMIgunftngdbYg1xLwHNdOu+B1Qr9WXF3YhzPZPxJXe8F/kp2GVhVQtfPXdHaP8AeyU9J9pQawEMZez6QnQDmJX+tsG4J5luU3N5ojV97PJjvlXwQ4+iUoVNAe2xuPzAeJLE54IvGXCD3iW5fTNcn1WnNb8UwugIH7Cwyv1Zv823QK4j6BV52IRYZEXrE6dduwzgGZOgPOWGDHuyYEmOEdUC3hv8doVWfzFlFUY+4PGeBGkAuyAOTwZtzyuT9wTkhxGbNzQbrp8ThxJlkK60qcrHD0aAy+HxwWIq/9a/B5+B3kgeBfqGWHj6E/163xJJkdFg6GMij4+2o8kiob37fT4pLJYobf8KrezQDt4MCKipsClaPtxkypAdzjY2VhnkHjFSx3WWid+jqZFTsgLRgnt9ZN7DK/BnqFnngkbow0ypF843C3w38LJJJJ4Dty2Ccef77Unisbs5GYEgy/0dHpTDPP6nFXjFCe+DFSmGef6IEwfdlMNA8/x0t
+HhKJV34ima/jK4V5/o5Y/z4a42pcVgqz/DngatCcLDZ8M7OvzAalef6+BMWFX5sU5vnHNLmrxE12B55MCvP8bomFQ7kFhnl+Z93AtPmddQPT5nfWDUyb31k3MG1+Z93AtPmddQPT5ncJR7kGmuUfTqD8qgwDa50/A/WIf8K0/TVY+BTlAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>6b1d1494-5cf8-49b7-8324-61ad83687657</rd:ReportID>
+</Report>
